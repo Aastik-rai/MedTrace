@@ -10,6 +10,7 @@ Public API for the first five ingestion stages::
         Evidence,
         extract_facts,
         PatientRecord,
+        search_facts,
     )
 """
 
@@ -34,6 +35,7 @@ from .patient_record import (
     get_facts_for_document,
     sort_facts_chronologically,
 )
+from .retrieval import RetrievalError, find_condition_history, search_facts
 
 __all__ = [
     "SUPPORTED_FACT_TYPES",
@@ -45,14 +47,17 @@ __all__ = [
     "PDFExtractionError",
     "PatientRecord",
     "PatientRecordError",
+    "RetrievalError",
     "chunk_extraction",
     "extract_facts",
     "extract_pdf_text",
     "facts_to_json",
+    "find_condition_history",
     "get_facts_by_name",
     "get_facts_by_type",
     "get_facts_for_document",
     "save_extraction_json",
+    "search_facts",
     "sort_facts_chronologically",
     "validate_fact",
 ]
